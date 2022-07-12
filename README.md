@@ -50,6 +50,8 @@ then in your browser, simply type the ip adress and you should see all the patch
 
 ## troubleshooting
 
+if you have trouble accessing wifi or connection problem, you can branch a monitor to the hdmi output of the rpi, then a terminal should appear. Type sudo raspi-config, then System Option, Wireless Lan and re-enter your SSID and passcode.
+
 ## notes
 
 ## mechanicals
