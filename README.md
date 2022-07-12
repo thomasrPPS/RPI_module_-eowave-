@@ -25,7 +25,7 @@ see the full [BOM on Octopart](https://)
 
 see [facebook group](https://) for discussion.
 
-[eowave]([https://www.instagram.com/eowave_modular/])
+[eowave](https://www.instagram.com/eowave_modular/)
 
 ![](images/module.png)
 
@@ -37,7 +37,7 @@ not explained here
 
 ## setting up
 
-get [this os installer from rpi os website]([https://www.raspberrypi.com/software/]).
+get [this os installer from rpi os website](https://www.raspberrypi.com/software/).
 launch the software, choose Raspberry PI os Lite (32 bit) then go on the wheel, and enter your wifi SSID and password also, pls click on the ssh box to activate it. Now click on write. 
 
 The first time you launch your module you'll have to set up the environment. So depending on your device (module or desktop), download the corresponding file. Inside is a script.sh which will install all the prerequisite packages for you. it should take 20/25 min.
