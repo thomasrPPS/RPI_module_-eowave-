@@ -1,7 +1,7 @@
 # RPI_module_-eowave-
 range of open source synth based on raspberry pi  and pure data
 
-![](images/rpi_module.jpg)
+![](images/IMG_3714.HEIC)
 
 ### module : 
 - audio codec: 
