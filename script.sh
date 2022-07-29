@@ -28,11 +28,6 @@ dtparam=i2c_arm=on
 dtparam=i2s=on
 dtoverlay=audioinjector-wm8731-audio" | sudo tee -a /boot/config.txt
 
-#téléchargement des fichiers via git
-cd /home/eowave
-git clone https://github.com/thomasrPPS/RPI_module_-eowave-.git
-cp -R /home/eowave/RPI_module_-eowave-/myfiles /home/eowave/
-
 #copie des externals pd firm V3
 sudo cp /home/eowave/myfiles/btn.pd /root/Pd/externals/
 sudo cp /home/eowave/myfiles/tgle.pd /root/Pd/externals/
