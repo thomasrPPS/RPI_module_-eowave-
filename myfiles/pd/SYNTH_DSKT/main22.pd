@@ -1,0 +1,60 @@
+#N canvas 0 336 691 530 8;
+#X obj 61 167 sig~;
+#X floatatom 61 145 5 0 0 0 - - - 0;
+#X obj 61 192 phasor~;
+#X obj 122 168 hradio 15 1 0 10 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X text 121 150 select table;
+#X text 160 211 specify table length;
+#X obj 61 216 wbosc~;
+#X msg 184 191 128;
+#X obj 205 93 loadbang;
+#X obj 57 36 wavebank 128;
+#X floatatom 406 56 5 0 0 0 - - - 0;
+#X floatatom 430 90 5 0 0 0 - - - 0;
+#X floatatom 383 24 5 0 0 0 - - - 0;
+#X floatatom 454 122 5 0 0 0 - - - 0;
+#X floatatom 478 154 5 0 0 0 - - - 0;
+#X obj 383 176 pack f f f f f;
+#X obj 436 205 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 489 220 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 331 206 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 455 204 key release off/on;
+#X text 508 219 amp reset off/on;
+#X text 382 6 attack time;
+#X text 404 38 decay level (0-1);
+#X text 429 73 decay time;
+#X text 453 105 sustain time;
+#X text 477 138 release time;
+#X obj 307 267 *~;
+#X obj 331 243 trigadsr~ 0 0;
+#X obj 305 303 dac~;
+#X obj 343 124 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 1;
+#X connect 6 0 26 0;
+#X connect 7 0 6 2;
+#X connect 8 0 7 0;
+#X connect 10 0 15 1;
+#X connect 10 0 29 0;
+#X connect 11 0 15 2;
+#X connect 11 0 29 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 3;
+#X connect 13 0 29 0;
+#X connect 14 0 15 4;
+#X connect 14 0 29 0;
+#X connect 15 0 27 1;
+#X connect 16 0 27 2;
+#X connect 17 0 27 3;
+#X connect 18 0 27 0;
+#X connect 26 0 28 0;
+#X connect 26 0 28 1;
+#X connect 27 0 26 1;
+#X connect 29 0 15 0;
