@@ -9,10 +9,11 @@ import time
 
 device = 1 #0 pour la carte sd et 1 pour la clef usb
 
-usbPath = "/media/usb/"
+usbPath = "/media/pi/USBBB"
 sdPath = "/home/pi/myfiles/pd/"
 
 midiList=[]
+usbList=[]
 
 #____________________SYSTEM____________________#
 
@@ -51,7 +52,7 @@ def readPresetList(selected_patch):
 
 def start_pd():
 	#os.system('sudo pd -nogui -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2006.pd &')
-	os.system('sudo pd -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2406.pd &')
+	os.system('sudo pd -audiodev 5 -channels 2 -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2406.pd &')
 	time.sleep(2)
 	os.system("aconnect 20:1 128:0")
 	os.system("aconnect 128:1 20:0")
@@ -89,3 +90,15 @@ def getWifi():
                 | awk '{print $4}' \
                 | awk -F\\\" '{print $2}'").read()
 	return [ipadress,ssid]
+
+def getUSBList():
+	global usbList
+	#os.system("sudo mount /dev/sda1 /media/usb -o uid=pi,gid=pi")
+	usbList=sorted(os.listdir(usbPath))
+	i = 0
+	while(i<len(usbList)):
+		if usbList[i]!=usbList[i].replace('.','') or usbList[i]!=usbList[i].replace('._',''):
+			del usbList[i]
+		i = i+1
+	
+	return 	usbList
