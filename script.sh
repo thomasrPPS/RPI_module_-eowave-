@@ -1,8 +1,6 @@
 #!/bin/bash
-sudo apt-get update
-sudo apt-get upgrade
 
-#pd + python libs (20 min)
+#pd + python libs (30 min)
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install pd -y
@@ -20,7 +18,7 @@ sudo chmod 666 /dev/ttyAMA0
 #enlever "console=serial0, 115200" dans /boot/cmdline.txt et ajouter quiet
 #ajouter ça à la fin de /boot/config.txt et pas de trucs liés au bluethooth :)))
 sudo sed -i 's/console=serial0,115200/ /g' /boot/cmdline.txt
-echo " quiet" | sudo tee /boot/cmdline.txt
+echo " quiet" | sudo tee -a /boot/cmdline.txt
 
 sudo sed -i 's/dtoverlay=vc4-kms-v3d/ /g' /boot/config.txt
 echo "disable_splash=1
