@@ -257,17 +257,17 @@ def cursor(draw,startR,stopR,cursorR):
     draw.rectangle((cursor,25,cursor+2,50),outline=BLACK, fill=G20,width=1)
 
 def animWave(draw,pos,tgl,waveform_tgl):
-    draw.rounded_rectangle((20+pos*30,15,40+pos*30,23),4,outline=G5, fill=BLACK)
+    draw.rectangle((20+pos*30,15,40+pos*30,23),outline=G5, fill=BLACK)
     draw.text((23+pos*30,16),str(waveform_tgl[(tgl-2)%(len(waveform_tgl))])[:4],font=font,fill=G5)
     
-    draw.rounded_rectangle((22+pos*30,25,42+pos*30,33),4,outline=G10, fill=BLACK)
+    draw.rectangle((22+pos*30,25,42+pos*30,33),outline=G10, fill=BLACK)
     draw.text((25+pos*30,26),str(waveform_tgl[(tgl-1)%(len(waveform_tgl))])[:4],font=font,fill=G10)
     
-    draw.rounded_rectangle((23+pos*30,34,45+pos*30,44),4,outline=WHITE, fill=BLACK,width=2)
+    draw.rectangle((23+pos*30,34,45+pos*30,44),outline=WHITE, fill=BLACK,width=2)
     draw.text((27+pos*30,36),str(waveform_tgl[(tgl)])[:4],font=font,fill=WHITE)
-    draw.rounded_rectangle((22+pos*30,45,42+pos*30,53),4,outline=G10, fill=BLACK)
+    draw.rectangle((22+pos*30,45,42+pos*30,53),outline=G10, fill=BLACK)
     draw.text((25+pos*30,46),str(waveform_tgl[(tgl+1)%(len(waveform_tgl))])[:4],font=font,fill=G10)
-    draw.rounded_rectangle((20+pos*30,55,40+pos*30,63),4,outline=G5, fill=BLACK)
+    draw.rectangle((20+pos*30,55,40+pos*30,63),outline=G5, fill=BLACK)
     draw.text((23+pos*30,56),str(waveform_tgl[(tgl+2)%(len(waveform_tgl))])[:4],font=font,fill=G5)
     
     
