@@ -52,7 +52,7 @@ def readPresetList(selected_patch):
 
 def start_pd():
 	#os.system('sudo pd -nogui -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2006.pd &')
-	os.system('sudo pd -audiodev 5 -channels 2 -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2406.pd &')
+	os.system('sudo pd -nogui -audiodev 5 -channels 2 -alsamidi -mididev 1 /home/pi/myfiles/main_patch_2406.pd &')
 	time.sleep(2)
 	os.system("aconnect 20:1 128:0")
 	os.system("aconnect 128:1 20:0")
