@@ -28,16 +28,16 @@ dtparam=i2s=on
 dtoverlay=audioinjector-wm8731-audio" | sudo tee -a /boot/config.txt
 
 #copie des externals pd firm V3
-sudo cp /home/eowave/myfiles/btn.pd /root/Pd/externals/
-sudo cp /home/eowave/myfiles/tgle.pd /root/Pd/externals/
-sudo cp /home/eowave/myfiles/multi.pd /root/Pd/externals/
+sudo cp /home/pi/myfiles/btn.pd /root/Pd/externals/
+sudo cp /home/pi/myfiles/tgle.pd /root/Pd/externals/
+sudo cp /home/pi/myfiles/multi.pd /root/Pd/externals/
 
 #serveur apache php + nouveau path
 sudo apt install apache2 -y
 sudo apt install php php-mbstring -y
 
-sudo chgrp -R www-data /home/eowave/myfiles/
-sudo chmod -R 2750 /home/eowave/myfiles/
+sudo chgrp -R www-data /home/pi/myfiles/
+sudo chmod -R 2750 /home/pi/myfiles/
 
 #lancement du systeme au démmarage (fonctionne pas encore)
 echo "[Unit]
