@@ -54,7 +54,7 @@ Group=pi
 Restart=always
 
 [Install]
-WantedBy=multi-user.target" | sudo tee /etc/systemd/python-pd.service
+WantedBy=multi-user.target" | sudo tee /etc/systemd/system/python-pd.service
 sudo systemctl enable python-pd.service
 
 #ensuite setup de la carte son :
