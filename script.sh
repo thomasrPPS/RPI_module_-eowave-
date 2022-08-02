@@ -30,9 +30,9 @@ dtparam=i2s=on
 dtoverlay=audioinjector-wm8731-audio" | sudo tee -a /boot/config.txt
 
 #copie des externals pd firm V3
-sudo cp /home/pi/myfiles/btn.pd /root/Pd/externals/
-sudo cp /home/pi/myfiles/tgle.pd /root/Pd/externals/
-sudo cp /home/pi/myfiles/multi.pd /root/Pd/externals/
+sudo cp /home/pi/myfiles/btn.pd /usr/lib/puredata/extra/
+sudo cp /home/pi/myfiles/tgle.pd /usr/lib/puredata/extra/
+sudo cp /home/pi/myfiles/multi.pd /usr/lib/puredata/extra/
 
 #serveur apache php + nouveau path
 sudo apt install apache2 -y
