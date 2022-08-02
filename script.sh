@@ -58,7 +58,5 @@ WantedBy=multi-user.target" | sudo tee /etc/systemd/system/python-pd.service
 sudo systemctl enable python-pd.service
 
 #ensuite setup de la carte son :
-alsamixer -c 0 
-amixer -D pulse sset Master 100% esc
 
 sudo reboot
