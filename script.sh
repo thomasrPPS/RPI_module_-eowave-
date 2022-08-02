@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get install pd -y
 sudo apt-get install python3-pil -y
 sudo apt-get install python3-pip -y
-pip3 install --upgrade numpy==1.19.5 -y
+pip3 install numpy==1.19.5 -y
 pip3 install python-osc
 pip3 install os-sys
 pip3 install luma.lcd
