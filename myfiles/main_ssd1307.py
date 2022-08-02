@@ -73,7 +73,7 @@ btntoggle=[]
 tab_icones=[icones.files,icones.pot,icones.cv,icones.midi,icones.cpu,icones.wifi]
 compteurs_btn=[]
 
-sel_page = -1
+sel_page = 0
 sel_menu = 0
 MAX_MENU = len(tab_icones)-1
 
